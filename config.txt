@@ -1,0 +1,98 @@
+# ============================================================
+# ICT Hero - ScreenConnect Installer Configuration
+# ============================================================
+# Lines starting with # or ; are comments and are ignored.
+# All keys are case-sensitive. Remove leading/trailing spaces.
+# ============================================================
+
+
+# ----------------------------------------------------------
+# LOG PATH
+# Folder where log files will be written.
+# The folder will be created automatically if it does not exist.
+# On each run, all previous logs are removed EXCEPT the very
+# first log (which records the original installation date/time).
+# Default: C:\Logs\ICTHero
+# ----------------------------------------------------------
+LogPath=C:\Logs\screenconnect
+
+
+# ----------------------------------------------------------
+# TIMEOUT
+# How many seconds the entire script is allowed to run before
+# it gives up and exits with an error.
+# Default: 300 (5 minutes). Increase for slow connections.
+# ----------------------------------------------------------
+TimeoutSeconds=300
+
+
+# ----------------------------------------------------------
+# COMPANY (Site / Client Name)
+# This is the most important field. It maps to the first &c=
+# parameter in the ScreenConnect download URL and determines
+# which "company" the agent registers under in the console.
+#
+# If left blank, the script will attempt to use:
+#   1. The computer's Active Directory domain
+#   2. PublicIP-ComputerName-Username (last resort)
+#
+# Examples:
+#   Company=Acme School
+#   Company=Acme Ltd
+# ----------------------------------------------------------
+Company=WBC-Paddock-test
+
+
+# ----------------------------------------------------------
+# SITE (optional)
+# Sub-site or location within the company.
+# Maps to the second &c= parameter in the URL.
+# Examples: Main Office, Site B, Library
+# ----------------------------------------------------------
+Site=
+
+
+# ----------------------------------------------------------
+# DEPARTMENT (optional)
+# Maps to the third &c= parameter in the URL.
+# Examples: IT, Admin, Finance
+# ----------------------------------------------------------
+Department=
+
+
+# ----------------------------------------------------------
+# DEVICE TYPE (optional)
+# Maps to the fourth &c= parameter in the URL.
+# Examples: Laptop, Desktop, Teacher iPad, Staff Laptop
+# ----------------------------------------------------------
+DeviceType=
+
+
+# ----------------------------------------------------------
+# TAG (optional)
+# A free-text tag applied to the agent in ScreenConnect.
+# Maps to the last &c= (Tag) parameter in the URL.
+# Examples: Managed, Trial, New Device
+# ----------------------------------------------------------
+Tag=
+
+
+# ----------------------------------------------------------
+# INSTALLER FILENAME (optional)
+# If you pre-download the installer and place it alongside
+# this config, set its exact filename here.
+# The script will look for this file before downloading.
+# Extension (.exe or .msi) will be adjusted automatically
+# based on the PreferMSI setting below.
+# Default: ScreenConnect.ClientSetup.exe
+# ----------------------------------------------------------
+InstallerName=ScreenConnect.ClientSetup.exe
+
+
+# ----------------------------------------------------------
+# PREFER MSI (optional)
+# Set to true to download/use the .msi installer instead of
+# the .exe wrapper. Useful for GPO/SCCM deployments.
+# Default: false
+# ----------------------------------------------------------
+PreferMSI=false
