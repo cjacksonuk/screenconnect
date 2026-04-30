@@ -40,7 +40,7 @@ TimeoutSeconds=300
 #   Company=Acme School
 #   Company=Acme Ltd
 # ----------------------------------------------------------
-Company=WBC-Paddock-test
+Company=test
 
 
 # ----------------------------------------------------------
